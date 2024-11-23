@@ -7,8 +7,8 @@
   <MyIP></MyIP>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/yourgithub/donetick</Support>
-  <Project>https://github.com/yourgithub/donetick</Project>
+  <Support>https://forum.hhf.technology/t/donetick-task-and-chore-manager-unraid-template-request</Support>
+  <Project>https://github.com/donetick/donetick</Project>
   <Overview>Donetick is a self-hosted application An open-source, user-friendly app for managing tasks and chores, featuring customizable options to help you and others stay organized</Overview>
   <Category>Productivity:</Category>
   <WebUI>http://[IP]:[PORT:8085]</WebUI>
