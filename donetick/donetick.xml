@@ -11,27 +11,20 @@
   <Project>https://github.com/donetick/donetick</Project>
   <Overview>Donetick is a self-hosted application - An open-source, user-friendly app for managing tasks and chores, featuring customizable options to help you and others stay organized</Overview>
   <Category>Productivity:</Category>
-  <WebUI>http://[IP]:[PORT:8085]</WebUI>
+  <WebUI>http://[IP]:[PORT:8000]</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/donetick/donetick/main/web/public/logo.svg</Icon>
   <ExtraParams/>
   <CPUset/>
   <DonateText/>
   <DonateLink/>
-  <Description>Donetick is a self-hosted application - An open-source, user-friendly app for managing tasks and chores, featuring customizable options to help you and others stay organized. Features include:
-  
-  - Task Management
-  - User Management
-  - Chore Scheduling
-  - Progress Tracking
-  - Customizable Categories
-  </Description>
+  <Description>Donetick is a self-hosted application - An open-source, user-friendly app for managing tasks and chores, featuring customizable options to help you and others stay organized. Requires selfhosted.yaml configuration file.</Description>
   
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8085</HostPort>
+        <HostPort>8000</HostPort>
         <ContainerPort>8000</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -40,12 +33,12 @@
   
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/donetick/database</HostDir>
-      <ContainerDir>/data</ContainerDir>
+      <HostDir>/mnt/user/appdata/Donetick/database</HostDir>
+      <ContainerDir>/usr/src/app/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/donetick</HostDir>
+      <HostDir>/mnt/user/appdata/Donetick</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -58,7 +51,7 @@
     </Variable>
     <Variable>
       <Name>DT_SQLITE_PATH</Name>
-      <Value>/data/donetick.db</Value>
+      <Value>/usr/src/app/data/donetick.db</Value>
     </Variable>
   </Environment>
   
@@ -67,35 +60,35 @@
   <Config 
     Name="WebUI Port" 
     Target="8000" 
-    Default="8085" 
+    Default="8000" 
     Mode="tcp" 
     Description="Container Port: 8000" 
     Type="Port" 
     Display="always" 
     Required="true" 
-    Mask="false">8085</Config>
+    Mask="false">8000</Config>
     
   <Config 
     Name="Database Path" 
-    Target="/data" 
-    Default="/mnt/user/appdata/donetick/database" 
+    Target="/usr/src/app/data" 
+    Default="/mnt/user/appdata/Donetick/database" 
     Mode="rw" 
-    Description="Container Path: /data" 
+    Description="Container Path: /usr/src/app/data" 
     Type="Path" 
     Display="always" 
     Required="true" 
-    Mask="false">/mnt/user/appdata/donetick/database</Config>
+    Mask="false">/mnt/user/appdata/Donetick/database</Config>
     
   <Config 
     Name="Config Path" 
     Target="/config" 
-    Default="/mnt/user/appdata/donetick" 
+    Default="/mnt/user/appdata/Donetick" 
     Mode="rw" 
     Description="Container Path: /config" 
     Type="Path" 
     Display="always" 
     Required="true" 
-    Mask="false">/mnt/user/appdata/donetick</Config>
+    Mask="false">/mnt/user/appdata/Donetick</Config>
     
   <Config 
     Name="Environment Mode" 
@@ -111,11 +104,11 @@
   <Config 
     Name="SQLite Database Path" 
     Target="DT_SQLITE_PATH" 
-    Default="/data/donetick.db" 
+    Default="/usr/src/app/data/donetick.db" 
     Mode="" 
     Description="Path to SQLite database file inside the container" 
     Type="Variable" 
     Display="always" 
     Required="true" 
-    Mask="false">/data/donetick.db</Config>
+    Mask="false">/usr/src/app/data/donetick.db</Config>
 </Container>
