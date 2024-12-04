@@ -8,14 +8,14 @@ mkdir -p /mnt/user/appdata/Donetick/config
 
 2. Create the selfhosted.yaml file:
 ```bash
-nano /mnt/user/appdata/Donetick/config/selfhosted.yaml
+nano /mnt/user/appdata/Donetick/config/default.yaml
 ```
 Copy the YAML content from above into this file.
 
 3. Set proper permissions:
 ```bash
 chmod -R 755 /mnt/user/appdata/Donetick
-chmod 644 /mnt/user/appdata/Donetick/config/selfhosted.yaml
+chmod 644 /mnt/user/appdata/Donetick/config/default.yaml
 chown -R nobody:users /mnt/user/appdata/Donetick
 ```
 
