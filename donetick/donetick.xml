@@ -18,7 +18,7 @@
   <CPUset/>
   <DonateText/>
   <DonateLink/>
-  <Description>Donetick is a self-hosted application - An open-source, user-friendly app for managing tasks and chores, featuring customizable options to help you and others stay organized. Requires selfhosted.yaml configuration file.</Description>
+  <Description>Donetick is a self-hosted application - An open-source, user-friendly app for managing tasks and chores, featuring customizable options to help you and others stay organized. Requires config file in the config directory.</Description>
   
   <Networking>
     <Mode>bridge</Mode>
@@ -38,7 +38,7 @@
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/Donetick</HostDir>
+      <HostDir>/mnt/user/appdata/Donetick/config</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -47,7 +47,7 @@
   <Environment>
     <Variable>
       <Name>DT_ENV</Name>
-      <Value>prod</Value>
+      <Value>default</Value>
     </Variable>
     <Variable>
       <Name>DT_SQLITE_PATH</Name>
@@ -82,24 +82,24 @@
   <Config 
     Name="Config Path" 
     Target="/config" 
-    Default="/mnt/user/appdata/Donetick" 
+    Default="/mnt/user/appdata/Donetick/config" 
     Mode="rw" 
     Description="Container Path: /config" 
     Type="Path" 
     Display="always" 
     Required="true" 
-    Mask="false">/mnt/user/appdata/Donetick</Config>
+    Mask="false">/mnt/user/appdata/Donetick/config</Config>
     
   <Config 
     Name="Environment Mode" 
     Target="DT_ENV" 
-    Default="prod" 
+    Default="default" 
     Mode="" 
-    Description="Set to prod for production environment" 
+    Description="Environment configuration name" 
     Type="Variable" 
     Display="always" 
     Required="true" 
-    Mask="false">prod</Config>
+    Mask="false">default</Config>
     
   <Config 
     Name="SQLite Database Path" 
