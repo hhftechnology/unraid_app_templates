@@ -39,14 +39,6 @@ Each template follows the standard Unraid XML format and includes:
 - Community Applications plugin installed
 - Docker enabled on your Unraid server
 
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/NewTemplate`)
-3. Commit your changes (`git commit -am 'Add new template for XYZ'`)
-4. Push to the branch (`git push origin feature/NewTemplate`)
-5. Create a new Pull Request
-
 ## Template Testing
 
 Before submitting a pull request, please ensure:
