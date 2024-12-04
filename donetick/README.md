@@ -2,21 +2,21 @@ To set this up:
 
 1. Create the necessary directories:
 ```bash
-mkdir -p /mnt/user/appdata/Donetick/database
-mkdir -p /mnt/user/appdata/Donetick/config
+mkdir -p /mnt/user/appdata/donetick/database
+mkdir -p /mnt/user/appdata/donetick/config
 ```
 
 2. Create the selfhosted.yaml file:
 ```bash
-nano /mnt/user/appdata/Donetick/config/local.yaml
+nano /mnt/user/appdata/donetick/config/local.yaml
 ```
 Copy the YAML content from above into this file.
 
 3. Set proper permissions:
 ```bash
-chmod -R 755 /mnt/user/appdata/Donetick
-chmod 644 /mnt/user/appdata/Donetick/config/local.yaml
-chown -R nobody:users /mnt/user/appdata/Donetick
+chmod -R 755 /mnt/user/appdata/donetick
+chmod 644 /mnt/user/appdata/donetick/config/local.yaml
+chown -R nobody:users /mnt/user/appdata/donetick
 ```
 
 Key points:
