@@ -9,23 +9,23 @@
   <Privileged>false</Privileged>
   <Support>https://forum.hhf.technology/t/donetick-task-and-chore-manager-unraid-template-request</Support>
   <Project>https://github.com/donetick/donetick</Project>
-  <Overview>Donetick is a self-hosted application - An open-source, user-friendly app for managing tasks and chores, featuring customizable options to help you and others stay organized</Overview>
+  <Overview>Donetick is a self-hosted application - An open-source, user-friendly app for managing tasks and chores</Overview>
   <Category>Productivity:</Category>
-  <WebUI>http://[IP]:[PORT:8000]</WebUI>
+  <WebUI>http://[IP]:[PORT:2021]</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/donetick/donetick/main/web/public/logo.svg</Icon>
   <ExtraParams/>
   <CPUset/>
   <DonateText/>
   <DonateLink/>
-  <Description>Donetick is a self-hosted application - An open-source, user-friendly app for managing tasks and chores, featuring customizable options to help you and others stay organized. Requires config file in the config directory.</Description>
+  <Description>Donetick is a self-hosted application - An open-source, user-friendly app for managing tasks and chores. Requires local.yaml configuration file.</Description>
   
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8000</HostPort>
-        <ContainerPort>8000</ContainerPort>
+        <HostPort>2021</HostPort>
+        <ContainerPort>2021</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -47,11 +47,7 @@
   <Environment>
     <Variable>
       <Name>DT_ENV</Name>
-      <Value>default</Value>
-    </Variable>
-    <Variable>
-      <Name>DT_SQLITE_PATH</Name>
-      <Value>/usr/src/app/data/donetick.db</Value>
+      <Value>local</Value>
     </Variable>
   </Environment>
   
@@ -59,14 +55,14 @@
   
   <Config 
     Name="WebUI Port" 
-    Target="8000" 
-    Default="8000" 
+    Target="2021" 
+    Default="2021" 
     Mode="tcp" 
-    Description="Container Port: 8000" 
+    Description="Container Port: 2021" 
     Type="Port" 
     Display="always" 
     Required="true" 
-    Mask="false">8000</Config>
+    Mask="false">2021</Config>
     
   <Config 
     Name="Database Path" 
@@ -93,22 +89,11 @@
   <Config 
     Name="Environment Mode" 
     Target="DT_ENV" 
-    Default="default" 
+    Default="local" 
     Mode="" 
     Description="Environment configuration name" 
     Type="Variable" 
     Display="always" 
     Required="true" 
-    Mask="false">default</Config>
-    
-  <Config 
-    Name="SQLite Database Path" 
-    Target="DT_SQLITE_PATH" 
-    Default="/usr/src/app/data/donetick.db" 
-    Mode="" 
-    Description="Path to SQLite database file inside the container" 
-    Type="Variable" 
-    Display="always" 
-    Required="true" 
-    Mask="false">/usr/src/app/data/donetick.db</Config>
+    Mask="false">local</Config>
 </Container>
