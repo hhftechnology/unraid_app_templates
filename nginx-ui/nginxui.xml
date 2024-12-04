@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>nginx-ui</Name>
+  <Overview>Nginx UI provides a web interface to manage Nginx configurations with a modern and intuitive user interface.</Overview>
+  <Description>Nginx UI is a web interface for managing Nginx configurations. Features include:[br]
+- Modern and intuitive web interface[br]
+- Live configuration editing[br]
+- Configuration validation[br]
+- SSL certificate management[br]
+- Real-time log viewing[br]
+[br]
+Container Path: /etc/nginx[br]
+UI Path: /etc/nginx-ui[br]
+Web Path: /var/www</Description>
+  <Registry>https://hub.docker.com/r/uozi/nginx-ui/</Registry>
+  <Repository>uozi/nginx-ui</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>TZ</Name>
+      <Value>Asia/Singapore</Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nginx</HostDir>
+      <ContainerDir>/etc/nginx</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nginx-ui</HostDir>
+      <ContainerDir>/etc/nginx-ui</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/www</HostDir>
+      <ContainerDir>/var/www</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <Banner></Banner>
+  <Icon>https://raw.githubusercontent.com/0xJacky/nginx-ui/master/app/src/assets/logo.png</Icon>
+  <ExtraParams></ExtraParams>
+  <PostArgs></PostArgs>
+  <CPUset></CPUset>
+  <DateInstalled></DateInstalled>
+  <DonateText>Support Nginx UI Development</DonateText>
+  <DonateLink>https://github.com/sponsors/0xJacky</DonateLink>
+  <Project>https://github.com/0xJacky/nginx-ui</Project>
+  <Support>https://forum.hhf.technology/t/nginx-ui-unraid-template-request</Support>
+</Container>
