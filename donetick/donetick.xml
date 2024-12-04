@@ -33,12 +33,12 @@
   
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/Donetick/database</HostDir>
+      <HostDir>/mnt/user/appdata/donetick/database</HostDir>
       <ContainerDir>/usr/src/app/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/Donetick/config</HostDir>
+      <HostDir>/mnt/user/appdata/donetick/config</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -67,24 +67,24 @@
   <Config 
     Name="Database Path" 
     Target="/usr/src/app/data" 
-    Default="/mnt/user/appdata/Donetick/database" 
+    Default="/mnt/user/appdata/donetick/database" 
     Mode="rw" 
     Description="Container Path: /usr/src/app/data" 
     Type="Path" 
     Display="always" 
     Required="true" 
-    Mask="false">/mnt/user/appdata/Donetick/database</Config>
+    Mask="false">/mnt/user/appdata/donetick/database</Config>
     
   <Config 
     Name="Config Path" 
     Target="/config" 
-    Default="/mnt/user/appdata/Donetick/config" 
+    Default="/mnt/user/appdata/donetick/config" 
     Mode="rw" 
     Description="Container Path: /config" 
     Type="Path" 
     Display="always" 
     Required="true" 
-    Mask="false">/mnt/user/appdata/Donetick/config</Config>
+    Mask="false">/mnt/user/appdata/donetick/config</Config>
     
   <Config 
     Name="Environment Mode" 
