@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>Gathio-MongoDB</Name>
+  <Repository>mongo:latest</Repository>
+  <Registry>https://hub.docker.com/_/mongo</Registry>
+  <Description>MongoDB instance for Gathio event management platform[br][br]This container should be started before the Gathio container.</Description>
+  <Overview>MongoDB database for Gathio event management platform</Overview>
+  <Project>https://www.mongodb.com/</Project>
+  <Category>Productivity: Tools:</Category>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>27017</HostPort>
+        <ContainerPort>27017</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/gathio/mongodb</HostDir>
+      <ContainerDir>/data/db</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Name>MONGO_INITDB_ROOT_USERNAME</Name>
+      <Value>root</Value>
+    </Variable>
+    <Variable>
+      <Name>MONGO_INITDB_ROOT_PASSWORD</Name>
+      <Value>change_this_password</Value>
+    </Variable>
+  </Environment>
+  <ExtraParams></ExtraParams>
+</Container>
