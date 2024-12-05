@@ -78,5 +78,3 @@ Important directories to backup:
   ```
 - Ensure all paths exist and have correct permissions
 - Check nginx-ui logs at `/mnt/user/appdata/nginx-ui/logs`
-
-Would you like me to elaborate on any of these sections or help with a specific part of the setup?
