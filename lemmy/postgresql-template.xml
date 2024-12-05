@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Lemmy-Postgres</Name>
+  <Repository>pgautoupgrade/pgautoupgrade:16-alpine</Repository>
+  <Registry>https://hub.docker.com/r/pgautoupgrade/pgautoupgrade/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  
+  <Support>https://github.com/LemmyNet/lemmy/discussions</Support>
+  <Project>https://www.postgresql.org/</Project>
+  <Overview>PostgreSQL database for Lemmy with auto-upgrade support.</Overview>
+  <Category>Productivity: Tools:</Category>
+  <Icon>https://www.postgresql.org/media/img/about/press/elephant.png</Icon>
+  
+  <Config Name="PostgreSQL Port" Target="5432" Default="5433" Mode="tcp" Description="Database port" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="lemmy" Mode="" Description="Database username" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="password" Mode="" Description="Database password" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="POSTGRES_DB" Target="POSTGRES_DB" Default="lemmy" Mode="" Description="Database name" Type="Variable" Display="always" Required="true" Mask="false"/>
+  
+  <Config Name="Data Path" Target="/var/lib/postgresql/data" Default="/mnt/user/appdata/lemmy/postgres" Mode="rw" Description="Database storage location" Type="Path" Display="always" Required="true" Mask="false"/>
+  
+  <Environment>
+    <Variable Name="POSTGRES_INITDB_ARGS" Mode="" Description="Init arguments">--auth-host=scram-sha-256</Variable>
+  </Environment>
+
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/lemmy/postgres</HostDir>
+      <ContainerDir>/var/lib/postgresql/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+
+  <Description>PostgreSQL database configured for Lemmy with the following features:
+- Automatic upgrades
+- Performance tuning
+- Query analysis logging
+
+Configuration:
+1. Set secure database credentials
+2. Update the credentials in Lemmy's configuration
+3. Choose a different port if 5433 is in use
+
+Note: This container should be started first before other Lemmy components.</Description>
+
+  <ExtraParams>-c "session_preload_libraries=auto_explain" -c "auto_explain.log_min_duration=5ms" -c "auto_explain.log_analyze=true" -c "auto_explain.log_triggers=true" -c "track_activity_query_size=1048576"</ExtraParams>
+</Container>
