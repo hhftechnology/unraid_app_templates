@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Lemmy-UI</Name>
+  <Repository>dessalines/lemmy-ui:0.19.6</Repository>
+  <Registry>https://hub.docker.com/r/dessalines/lemmy-ui/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  
+  <Support>https://github.com/LemmyNet/lemmy-ui/discussions</Support>
+  <Project>https://join-lemmy.org/</Project>
+  <Overview>Web frontend for the Lemmy platform.</Overview>
+  <Category>Social: Network:Other</Category>
+  <WebUI>http://[IP]:[PORT:1236]</WebUI>
+  <Icon>https://raw.githubusercontent.com/LemmyNet/lemmy-ui/main/src/assets/icons/favicon.svg</Icon>
+  
+  <Config Name="WebUI Port" Target="1236" Default="1236" Mode="tcp" Description="Web UI port" Type="Port" Display="always" Required="true" Mask="false"/>
+  
+  <Environment>
+    <Variable Name="LEMMY_UI_LEMMY_INTERNAL_HOST" Mode="" Description="Internal Lemmy server host">lemmy-server:8536</Variable>
+    <Variable Name="LEMMY_UI_LEMMY_EXTERNAL_HOST" Mode="" Description="External Lemmy host">localhost:1236</Variable>
+    <Variable Name="LEMMY_UI_HTTPS" Mode="" Description="Enable HTTPS">false</Variable>
+    <Variable Name="LEMMY_UI_DEBUG" Mode="" Description="Enable debug mode">true</Variable>
+  </Environment>
+
+  <Description>Lemmy web frontend. This container requires:
+
+1. Lemmy backend server
+2. Proper network configuration to communicate with the backend
+
+Configuration:
+1. Ensure Lemmy backend is running
+2. Configure LEMMY_UI_LEMMY_INTERNAL_HOST to point to your Lemmy backend
+3. Set LEMMY_UI_LEMMY_EXTERNAL_HOST to your domain
+4. Enable HTTPS if using SSL
+
+For more information, visit https://join-lemmy.org/docs/administration/install.html</Description>
+</Container>
