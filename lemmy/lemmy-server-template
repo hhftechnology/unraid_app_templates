@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Lemmy-Server</Name>
+  <Repository>dessalines/lemmy:0.19.6</Repository>
+  <Registry>https://hub.docker.com/r/dessalines/lemmy/</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  
+  <Support>https://github.com/LemmyNet/lemmy/discussions</Support>
+  <Project>https://join-lemmy.org/</Project>
+  <Overview>Lemmy backend server component for the federated link aggregation and discussion platform.</Overview>
+  <Category>Social: Network:Other</Category>
+  <WebUI>http://[IP]:[PORT:8536]</WebUI>
+  <Icon>https://raw.githubusercontent.com/LemmyNet/lemmy-ui/main/src/assets/icons/favicon.svg</Icon>
+  
+  <Config Name="WebSocket Port" Target="8536" Default="8536" Mode="tcp" Description="WebSocket port for Lemmy API" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Metrics Port" Target="10002" Default="10002" Mode="tcp" Description="Prometheus metrics port" Type="Port" Display="advanced" Required="false" Mask="false"/>
+  
+  <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/lemmy/config" Mode="rw" Description="Configuration directory" Type="Path" Display="always" Required="true" Mask="false"/>
+  
+  <Environment>
+    <Variable Name="RUST_LOG" Mode="" Description="Logging configuration">warn,lemmy_server=debug,lemmy_api=debug,lemmy_api_common=debug,lemmy_api_crud=debug,lemmy_apub=debug,lemmy_db_schema=debug,lemmy_db_views=debug,lemmy_db_views_actor=debug,lemmy_db_views_moderator=debug,lemmy_routes=debug,lemmy_utils=debug,lemmy_websocket=debug</Variable>
+    <Variable Name="RUST_BACKTRACE" Mode="" Description="Enable full backtrace">full</Variable>
+  </Environment>
+
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/lemmy/config</HostDir>
+      <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+
+  <Description>Lemmy backend server component. This container requires:
+
+1. PostgreSQL database
+2. Pict-rs for image hosting
+3. Lemmy-UI for the frontend
+
+Configuration:
+1. Set up PostgreSQL container first
+2. Configure lemmy.hjson in the config directory
+3. Start this container
+4. Set up remaining containers (Pict-rs and Lemmy-UI)
+
+For detailed setup instructions, visit https://join-lemmy.org/docs/administration/install.html</Description>
+</Container>
