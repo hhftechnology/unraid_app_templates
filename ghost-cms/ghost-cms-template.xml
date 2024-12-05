@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>Ghost</Name>
+  <Repository>ghost:5-alpine</Repository>
+  <Registry>https://hub.docker.com/_/ghost</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  
+  <Support>https://forums.unraid.net/</Support>
+  <Project>https://ghost.org/</Project>
+  <Overview>Ghost is a free and open source blogging platform written in JavaScript</Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:2368]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/yourusername/unraid-templates/master/ghost.xml</TemplateURL>
+  <Icon>https://ghost.org/images/logos/ghost-logo-white.svg</Icon>
+  
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>2368</HostPort>
+        <ContainerPort>2368</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/ghost/content</HostDir>
+      <ContainerDir>/var/lib/ghost/content</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+
+  <Environment>
+    <Variable>
+      <Name>database__client</Name>
+      <Value>mysql</Value>
+    </Variable>
+    <Variable>
+      <Name>database__connection__host</Name>
+      <Value>ghost_db</Value>
+    </Variable>
+    <Variable>
+      <Name>database__connection__user</Name>
+      <Value>ghost</Value>
+    </Variable>
+    <Variable>
+      <Name>database__connection__password</Name>
+      <Value>91XHfXc0zpJZ8SCTsTheaDW3rm15w17yPGjxHzcL</Value>
+    </Variable>
+    <Variable>
+      <Name>database__connection__database</Name>
+      <Value>ghost</Value>
+    </Variable>
+    <Variable>
+      <Name>url</Name>
+      <Value>http://[IP]:[PORT:2368]</Value>
+    </Variable>
+  </Environment>
+
+  <Labels/>
+  
+  <ExtraParams></ExtraParams>
+  <PostArgs></PostArgs>
+  
+  <Description>Ghost is an open source, professional publishing platform built on a modern Node.js technology stack — designed for teams who need power, flexibility and performance.[br][br]
+    [b]Features:[/b][br]
+    - Modern publishing platform[br]
+    - Beautiful, minimal interface[br]
+    - Fully customizable[br]
+    - SEO optimized[br]
+    [br]
+    [b]Default Credentials:[/b][br]
+    Database will be automatically configured with the provided environment variables.</Description>
+</Container>
