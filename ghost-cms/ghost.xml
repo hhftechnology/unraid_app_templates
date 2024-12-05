@@ -12,7 +12,7 @@
   <Overview>Ghost is a free and open source blogging platform written in JavaScript</Overview>
   <Category>Productivity: Tools:</Category>
   <WebUI>http://[IP]:[PORT:2368]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/yourusername/unraid-templates/master/ghost.xml</TemplateURL>
+  <TemplateURL>https://git.hhf.technology/hhf/unraid_app_templates/raw/branch/main/ghost-cms/ghost.xml</TemplateURL>
   <Icon>https://ghost.org/images/logos/ghost-logo-white.svg</Icon>
   
   <Networking>
