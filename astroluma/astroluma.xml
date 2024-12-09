@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>Astroluma</Name>
+  <Repository>sanjeet990/astroluma:latest</Repository>
+  <Registry>https://hub.docker.com/r/sanjeet990/astroluma</Registry>
+  <Network>host</Network>
+  <MyIP></MyIP>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  
+  <Support></Support>
+  <Project></Project>
+  <Overview>Astroluma application with MongoDB database</Overview>
+  <Category>Other:</Category>
+  <WebUI>http://[IP]:8000</WebUI>
+  <TemplateURL></TemplateURL>
+  <Icon></Icon>
+  
+  <!-- Environment Variables -->
+  <Environment>
+    <Variable>
+      <Name>PORT</Name>
+      <Value>8000</Value>
+    </Variable>
+    <Variable>
+      <Name>NODE_ENV</Name>
+      <Value>production</Value>
+    </Variable>
+    <Variable>
+      <Name>SECRET_KEY</Name>
+      <Value>a2c5f9a8b2d7e1a7f2c9c8d9b5f7a3d5</Value>
+    </Variable>
+    <Variable>
+      <Name>MONGODB_URI</Name>
+      <Value>mongodb://localhost:27017/astroluma</Value>
+    </Variable>
+  </Environment>
+  
+  <!-- Volume Mappings -->
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/astroluma/uploads</HostDir>
+      <ContainerDir>/app/storage/uploads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+</Container>
