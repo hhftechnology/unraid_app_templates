@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>Hoarder</Name>
+  <Description>Hoarder is a web application for archiving and searching content</Description>
+  <Registry>ghcr.io</Registry>
+  <Repository>hoarder-app/hoarder</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>MEILI_ADDR</Name>
+      <Value>http://meilisearch:7700</Value>
+    </Variable>
+    <Variable>
+      <Name>BROWSER_WEB_URL</Name>
+      <Value>http://chrome:9222</Value>
+    </Variable>
+    <Variable>
+      <Name>DATA_DIR</Name>
+      <Value>/data</Value>
+    </Variable>
+    <Variable>
+      <Name>OPENAI_API_KEY</Name>
+      <Value></Value>
+    </Variable>
+  </Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3032</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/hoarder/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI>http://[IP]:[PORT:3032]/</WebUI>
+</Container>
