@@ -36,7 +36,7 @@ The MongoDB template provides the database backend required for the Astroluma ap
    - Review and adjust environment variables if needed
    - Click "Apply"
 
-## ⚙️ Configuration
+## Configuration
 
 ### Astroluma Application Template
 
