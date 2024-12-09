@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>Hoarder-Meilisearch</Name>
+  <Description>Meilisearch search engine for Hoarder application</Description>
+  <Registry>docker.io</Registry>
+  <Repository>getmeili/meilisearch</Repository>
+  <Tag>v1.11.1</Tag>
+  <Privileged>false</Privileged>
+  <Environment>
+    <Variable>
+      <Name>MEILI_NO_ANALYTICS</Name>
+      <Value>true</Value>
+    </Variable>
+  </Environment>
+  <Network>bridge</Network>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/hoarder/meilisearch</HostDir>
+      <ContainerDir>/meili_data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+</Container>
