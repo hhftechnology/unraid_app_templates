@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container version="2">
+  <Name>Astroluma-MongoDB</Name>
+  <Repository>mongo:6.0</Repository>
+  <Registry>https://hub.docker.com/_/mongo</Registry>
+  <Network>bridge</Network>
+  <MyIP></MyIP>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  
+  <Support></Support>
+  <Project>https://www.mongodb.com/</Project>
+  <Overview>MongoDB database for Astroluma application</Overview>
+  <Category>Databases:</Category>
+  
+  <!-- Port Mappings -->
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>27017</HostPort>
+        <ContainerPort>27017</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  
+  <!-- Volume Mappings -->
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/astroluma/mongodb</HostDir>
+      <ContainerDir>/data/db</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+</Container>
