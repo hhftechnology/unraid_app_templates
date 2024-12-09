@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>Hoarder-Chrome</Name>
+  <Description>Chrome browser service for Hoarder application</Description>
+  <Registry>gcr.io</Registry>
+  <Repository>zenika-hub/alpine-chrome</Repository>
+  <Tag>123</Tag>
+  <Privileged>false</Privileged>
+  <Network>bridge</Network>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9222</HostPort>
+        <ContainerPort>9222</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <ExtraParams>--no-sandbox --disable-gpu --disable-dev-shm-usage --remote-debugging-address=0.0.0.0 --remote-debugging-port=9222 --hide-scrollbars</ExtraParams>
+</Container>
