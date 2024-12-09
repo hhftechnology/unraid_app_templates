@@ -2,8 +2,9 @@
 <Container>
   <Name>Hoarder</Name>
   <Description>Hoarder is a web application for archiving and searching content</Description>
+  <Overview>Hoarder allows you to archive and search web content with built-in indexing capabilities</Overview>
   <Registry>ghcr.io</Registry>
-  <Repository>hoarder-app/hoarder</Repository>
+  <Repository>ghcr.io/hoarder-app/hoarder</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment>
@@ -42,4 +43,6 @@
     </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:3032]/</WebUI>
+  <Icon>https://raw.githubusercontent.com/hoarder-app/hoarder/main/web/public/favicon.png</Icon>
+  <Config Name="Version" Target="HOARDER_VERSION" Default="release" Mode="" Description="Version of Hoarder to use" Type="Variable" Display="advanced" Required="true" Mask="false"/>
 </Container>
