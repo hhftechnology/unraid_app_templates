@@ -30,8 +30,8 @@ Each template follows the standard Unraid XML format and includes:
 
 | Application | Description | Status |
 |-------------|-------------|---------|
-| [Template 1] | Description of app 1 | ✅ Stable |
-| [Template 2] | Description of app 2 | ✅ Stable |
+| [nginx-ui] | Nginx UI | ✅ Stable |
+| [donetick] | Notes app | ✅ Stable |
 
 ## Installation Requirements
 
