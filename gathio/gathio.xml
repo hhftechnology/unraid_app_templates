@@ -7,14 +7,14 @@
   <Overview>Gathio is a simple, self-hosted event management and invitation platform</Overview>
   <Project>https://github.com/lowercasename/gathio</Project>
   <Category>Productivity:</Category>
-  <WebUI>http://[IP]:[PORT:3032]</WebUI>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>3032</HostPort>
+        <HostPort>3000</HostPort>
         <ContainerPort>3000</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
