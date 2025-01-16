@@ -13,6 +13,7 @@ Container Path: /etc/nginx[br]
 UI Path: /etc/nginx-ui[br]
 Web Path: /var/www</Description>
   <Registry>https://hub.docker.com/r/uozi/nginx-ui/</Registry>
+  <Category>Webserver:</Category>
   <Repository>uozi/nginx-ui</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
@@ -54,7 +55,7 @@ Web Path: /var/www</Description>
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
   <Banner></Banner>
   <Icon>https://raw.githubusercontent.com/0xJacky/nginx-ui/master/app/src/assets/logo.png</Icon>
   <ExtraParams></ExtraParams>
