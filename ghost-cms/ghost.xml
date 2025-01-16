@@ -9,8 +9,9 @@
   <Support>https://forum.hhf.technology/t/complete-setup-guide-ghost-blog-on-unraid-2024/</Support>
   <Project>https://ghost.org/</Project>
   <Overview>Ghost is a free and open source blogging platform written in JavaScript</Overview>
-  <Category>Productivity: Tools:</Category>
+  <Category>Blog</Category>
   <WebUI>http://[IP]:[PORT:2368]/</WebUI>
+  <Support>https://forum.hhf.technology/t/unraid-template-request</Support>
   <TemplateURL>https://git.hhf.technology/hhf/unraid_app_templates/raw/branch/main/ghost-cms/ghost.xml</TemplateURL>
   <Icon>https://ghost.org/images/logos/ghost-logo-white.svg</Icon>
   

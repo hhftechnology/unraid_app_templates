@@ -10,8 +10,9 @@
   <Support>https://github.com/LemmyNet/lemmy-ui/discussions</Support>
   <Project>https://join-lemmy.org/</Project>
   <Overview>Web frontend for the Lemmy platform.</Overview>
-  <Category>Social: Network:Other</Category>
+  <Category>Social</Category>
   <WebUI>http://[IP]:[PORT:1236]</WebUI>
+  <Support>https://forum.hhf.technology/t/unraid-template-request</Support>
   <Icon>https://raw.githubusercontent.com/LemmyNet/lemmy-ui/main/src/assets/icons/favicon.svg</Icon>
   
   <Config Name="WebUI Port" Target="1236" Default="1236" Mode="tcp" Description="Web UI port" Type="Port" Display="always" Required="true" Mask="false"/>

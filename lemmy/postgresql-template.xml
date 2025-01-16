@@ -10,7 +10,7 @@
   <Support>https://github.com/LemmyNet/lemmy/discussions</Support>
   <Project>https://www.postgresql.org/</Project>
   <Overview>PostgreSQL database for Lemmy with auto-upgrade support.</Overview>
-  <Category>Productivity: Tools:</Category>
+  <Category>Database</Category>
   <Icon>https://www.postgresql.org/media/img/about/press/elephant.png</Icon>
   
   <Config Name="PostgreSQL Port" Target="5432" Default="5433" Mode="tcp" Description="Database port" Type="Port" Display="always" Required="true" Mask="false"/>

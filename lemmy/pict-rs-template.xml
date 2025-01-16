@@ -10,7 +10,7 @@
   <Support>https://git.asonix.dog/asonix/pict-rs</Support>
   <Project>https://git.asonix.dog/asonix/pict-rs</Project>
   <Overview>Image hosting service for Lemmy.</Overview>
-  <Category>MediaApp:Photos</Category>
+  <Category>MediaApp</Category>
   <Icon>https://raw.githubusercontent.com/LemmyNet/lemmy-ui/main/src/assets/icons/favicon.svg</Icon>
   
   <Config Name="API Key" Target="PICTRS__API_KEY" Default="changeme" Mode="" Description="API key for authentication" Type="Variable" Display="always" Required="true" Mask="true"/>

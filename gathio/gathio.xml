@@ -6,7 +6,9 @@
   <Description>Gathio is a simple, self-hosted event management and invitation platform.[br][br]You will need to configure the MongoDB container separately as a dependency.</Description>
   <Overview>Gathio is a simple, self-hosted event management and invitation platform</Overview>
   <Project>https://github.com/lowercasename/gathio</Project>
-  <Category>Productivity:</Category>
+  <Support>https://forum.hhf.technology/t/unraid-template-request</Support>
+  <Category>Productivity</Category>
+  <Icon>https://raw.githubusercontent.com/donetick/donetick/main/web/public/logo.svg</Icon>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>

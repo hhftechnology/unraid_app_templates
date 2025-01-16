@@ -3,15 +3,16 @@
   <Name>Astroluma-MongoDB</Name>
   <Repository>mongo:6.0</Repository>
   <Registry>https://hub.docker.com/_/mongo</Registry>
+  <Icon>https://raw.githubusercontent.com/hhftechnology/unraid_app_templates/refs/heads/main/images/mongodb.png</Icon>
   <Network>bridge</Network>
   <MyIP></MyIP>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   
-  <Support></Support>
+  <Support>https://forum.hhf.technology/t/unraid-template-request</Support>
   <Project>https://www.mongodb.com/</Project>
   <Overview>MongoDB database for Astroluma application</Overview>
-  <Category>Databases:</Category>
+  <Category>Databases</Category>
   
   <!-- Port Mappings -->
   <Networking>

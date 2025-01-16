@@ -10,10 +10,10 @@
   <Support>https://forum.hhf.technology/t/donetick-task-and-chore-manager-unraid-template-request</Support>
   <Project>https://github.com/donetick/donetick</Project>
   <Overview>Donetick is a self-hosted application - An open-source, user-friendly app for managing tasks and chores</Overview>
-  <Category>Productivity:</Category>
+  <Category>Productivity</Category>
   <WebUI>http://[IP]:[PORT:2021]</WebUI>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/donetick/donetick/main/web/public/logo.svg</Icon>
+  <Icon>https://raw.githubusercontent.com/hhftechnology/unraid_app_templates/refs/heads/main/images/donetick.png</Icon>
   <ExtraParams/>
   <CPUset/>
   <DonateText/>

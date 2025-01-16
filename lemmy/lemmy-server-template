@@ -7,10 +7,10 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   
-  <Support>https://github.com/LemmyNet/lemmy/discussions</Support>
+  <Support>https://forum.hhf.technology/t/unraid-template-request</Support>
   <Project>https://join-lemmy.org/</Project>
   <Overview>Lemmy backend server component for the federated link aggregation and discussion platform.</Overview>
-  <Category>Social: Network:Other</Category>
+  <Category>Social</Category>
   <WebUI>http://[IP]:[PORT:8536]</WebUI>
   <Icon>https://raw.githubusercontent.com/LemmyNet/lemmy-ui/main/src/assets/icons/favicon.svg</Icon>
   

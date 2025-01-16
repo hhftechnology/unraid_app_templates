@@ -10,11 +10,11 @@
   <Support>https://forum.hhf.technology/t/complete-setup-guide-ghost-blog-on-unraid-2024/</Support>
   <Project>https://mariadb.org/</Project>
   <Overview>MariaDB database for Ghost blog platform</Overview>
-  <Category>Productivity: Tools:</Category>
+  <Category>Databases</Category>
   <WebUI></WebUI>
   <TemplateURL>https://git.hhf.technology/hhf/unraid_app_templates/raw/branch/main/ghost-cms/ghost-db.xml</TemplateURL>
   <Icon>https://mariadb.org/wp-content/themes/twentynineteen-child/icons/mariadb_org_rgb_h.svg</Icon>
-  
+  <Support>https://forum.hhf.technology/t/unraid-template-request</Support>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>

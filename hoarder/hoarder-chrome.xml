@@ -4,6 +4,8 @@
   <Description>Chrome browser service for Hoarder application</Description>
   <Registry>gcr.io</Registry>
   <Repository>zenika-hub/alpine-chrome</Repository>
+  <Icon>https://raw.githubusercontent.com/hhftechnology/unraid_app_templates/refs/heads/main/images/google-chrome.png</Icon>
+  <Category>Browser</Category>
   <Tag>123</Tag>
   <Privileged>false</Privileged>
   <Network>bridge</Network>

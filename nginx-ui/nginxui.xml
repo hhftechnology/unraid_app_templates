@@ -13,7 +13,8 @@ Container Path: /etc/nginx[br]
 UI Path: /etc/nginx-ui[br]
 Web Path: /var/www</Description>
   <Registry>https://hub.docker.com/r/uozi/nginx-ui/</Registry>
-  <Category>Webserver:</Category>
+  <Category>Webserver</Category>
+  <Icon>https://raw.githubusercontent.com/hhftechnology/unraid_app_templates/refs/heads/main/images/hoarder.png</Icon>
   <Repository>uozi/nginx-ui</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>

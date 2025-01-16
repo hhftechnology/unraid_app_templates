@@ -6,7 +6,8 @@
   <Description>MongoDB instance for Gathio event management platform[br][br]This container should be started before the Gathio container.</Description>
   <Overview>MongoDB database for Gathio event management platform</Overview>
   <Project>https://www.mongodb.com/</Project>
-  <Category>Productivity: Tools:</Category>
+  <Category>Databases</Category>
+  <Icon>https://raw.githubusercontent.com/hhftechnology/unraid_app_templates/refs/heads/main/images/mongodb.png</Icon>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>

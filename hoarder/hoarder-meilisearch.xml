@@ -5,7 +5,9 @@
   <Registry>docker.io</Registry>
   <Repository>getmeili/meilisearch</Repository>
   <Tag>v1.11.1</Tag>
+  <Icon>https://raw.githubusercontent.com/hhftechnology/unraid_app_templates/refs/heads/main/images/meilisearch.png</Icon>
   <Privileged>false</Privileged>
+  <Category>Search</Category>
   <Environment>
     <Variable>
       <Name>MEILI_NO_ANALYTICS</Name>
