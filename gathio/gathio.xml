@@ -8,7 +8,7 @@
   <Project>https://github.com/lowercasename/gathio</Project>
   <Support>https://forum.hhf.technology/t/unraid-template-request</Support>
   <Category>Productivity</Category>
-  <Icon>https://raw.githubusercontent.com/donetick/donetick/main/web/public/logo.svg</Icon>
+  <Icon>https://raw.githubusercontent.com/hhftechnology/unraid_app_templates/refs/heads/main/images/gathio.png</Icon>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
