@@ -58,7 +58,7 @@ Web Path: /var/www</Description>
   </Data>
   <WebUI>http://[IP]:[PORT:80]/</WebUI>
   <Banner></Banner>
-  <Icon>https://raw.githubusercontent.com/0xJacky/nginx-ui/master/app/src/assets/logo.png</Icon>
+  <Icon>https://raw.githubusercontent.com/hhftechnology/unraid_app_templates/refs/heads/main/images/nginx-light.png</Icon>
   <ExtraParams></ExtraParams>
   <PostArgs></PostArgs>
   <CPUset></CPUset>
